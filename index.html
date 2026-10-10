@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Form</title>
+<style>
+body { font-family: Arial, sans-serif; background: #f0f2f5; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+.box { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); width: 300px; text-align: center; }
+input { width: 100%; padding: 10px; margin: 8px 0; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box; }
+button { width: 100%; padding: 10px; background: #007bff; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 16px; margin-top: 10px; }
+button:hover { background: #0056b3; }
+#msg { margin-top: 15px; font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="box">
+<input type="text" id="username" placeholder="username">
+<input type="password" id="password" placeholder="password">
+<button onclick="checkLogin()">Login</button>
+<p id="msg"></p>
+</div>
+<script>
+function checkLogin() {
+  var user = document.getElementById('username').value;
+  var pass = document.getElementById('password').value;
+  var msg = document.getElementById('msg');
+  if (user === '1234' && pass === '5050') {
+    msg.style.color = 'green';
+    msg.textContent = 'Login successful!';
+  } else {
+    msg.style.color = 'red';
+    msg.textContent = 'Incorrect username or password!';
+  }
+}
+</script>
+</body>
+</html>
